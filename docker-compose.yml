@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  web:
+    build: 
+      dockerfile: Dockerfile
+
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+
+  whisper-asr-webservice:
+      build:
+        context: .
+        dockerfile: DockerfileWhisper
+      environment:
+        - ASR_MODEL=base
+      ports:
+        - "9000:9000"
+      volumes:
+        - ./app:/app/app
+        - cache-pip:/root/.cache/pip
+        - cache-poetry:/root/.cache/poetry
+        - cache-whisper:/root/.cache/whisper
+
+volumes:
+  cache-pip:
+  cache-poetry:
+  cache-whisper:
+  cache-faster-whisper:
