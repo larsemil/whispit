@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokument</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <style>
+        body{
+            background-color: #333;
+            padding: 0; 
+            margin: 0;
+            color: #fff;
+            text-align:center;
+            font-family: sans-serif;
+
+        }
+
+        #radarChart{
+            background-color: #fff;
+            width: 700px;
+            height: 700px;
+            margin: 40px auto;
+        }
+        #recording{
+            background-color: red;
+            color: #fff;
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            background-color: rgba(255,0,0,0.3);
+            text-align: center;
+            padding-top: 30vh;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            font-size: 200px;
+        }
+
+        #recording.show{
+            display: block;
+        }
+
+        #loading{
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            background-color: rgba(0,0,0,0.3);
+            text-align: center;
+            padding-top: 30vh;
+            width: 100vw;
+            height: 100vh;
+            color: #fff;
+            top: 0;
+            left: 0;
+            font-size: 200px;
+
+        
+        }
+        #loading.show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        Loading....
+    </div>
+
+    <div id="recording">
+        Recording...
+    </div>
+<div class="content">
+
+    <h2>Svara på frågan:</h1>
+    <h1>Varför tar du bilen till jobbet?</h2>
+    <h3>Håll in space medans du svarar....</h3>
+
+ 
+</div>
+
+<div id="radarChart"></div>
+
+
+<script src="html/main.js"></script>
+
+</body>
+</html>

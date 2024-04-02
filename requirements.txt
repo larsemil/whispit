@@ -1,2 +1,6 @@
 Flask
 transformers
+torch
+flask-cors
+sentencepiece
+openai-whisper
